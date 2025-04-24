@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Setting the language to English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Setting viewports for different screen sizes-->
+    <title>Gamers' Arena</title> <!-- Page title -->
+    <link rel="stylesheet" href="checkout.css"> <!-- Linking external CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><!--Importing the "Poppins" font from Google Fonts-->
+    <link rel="icon" type="image/x-icon" href="favicon.png"><!--Adding favicon-->
+    <link rel="manifest" href="manifest.json"><!--Linking web to manifest file-->
+</head>
+<!-- Header begins -->
+<header>
+</div>
+ <nav><!--Opening navigation bar-->
+    <a href="index.html"><!--Linking logo to home page-->
+        <!-- Logo -->
+        <h2 class="logo"><span>GAMERS'</span>ARENA</h2>
+        </a>
+
+        <!-- Hamburger menu for smaller screens -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+        <!-- Navigation menu -->
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="up_games.html">Upcoming games</a></li>
+            <li><a href="con_gamperi.html">Consoles and gaming peripherals</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="que_faq.html">Queries and FAQ</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+
+        <!-- Social media icons -->
+        <div class="socials">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook link">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/login" target="_blank" aria-label="LinkenIn link">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+    </nav>
+</header>
+<!-- Header ends -->
+
+
+
+
+<!-- Body begins -->
+<body>
+    <h1 class="main">Checkout</h1>
+    
+    <!-- Order Summary (Filled from localStorage or sessionStorage) -->
+    <h2 class="subheading">Your Order</h2>
+    <table id="order-summary" border="1">
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price Each</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <td id="checkout-total">LKR 0.00</td>
+        </tr>
+        </tfoot>
+    </table>
+    
+    <!-- Form -->
+    <h2 class="subheading">Delivery & Payment Details</h2>
+    <form id="checkout-form">
+        <fieldset>
+        <legend>Personal Details</legend>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Phone: <input type="tel" name="phone" required></label>
+        </fieldset>
+    
+        <fieldset>
+        <legend>Delivery Address</legend>
+        <label>Address: <textarea name="address" required></textarea></label>
+        </fieldset>
+    
+        <fieldset>
+        <legend>Payment</legend>
+        <label>Card Number: <input type="text" name="card" required pattern="\d{16}"></label><br>
+        <label>Expiry: <input type="month" name="expiry" required></label><br>
+        <label>CVV: <input type="text" name="cvv" required pattern="\d{3}"></label>
+        </fieldset>
+    
+        <button type="submit">Pay</button>
+    </form>
+
+    <div id="thank-you-message"></div>
+
+    
+    <script src="checkout.js"></script>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!--Body ends-->
+
+
+<!-- Footer begins -->
+<footer>
+    <div class="footer-container">
+        <!-- About Us -->
+        <div class="abt">
+            <h3>About Us</h3><!--About us heading-->
+            <p>At Gamers' Arena, we are dedicated to fueling your passion for gaming. 
+                From the newest releases to top-tier gear, we ensure to provide everything you need 
+                to enhance your gaming experience. Built by gamers, for gamers, our goal is to create a 
+                one-stop hub for gaming enthusiasts to connect, discover, 
+                and thrive in the ever-evolving gaming world.</p><!--About us paragraph-->
+        </div>
+
+        <!-- Store location in map-->
+        <div class="map">
+            <h3>Our Stores</h3><!--Out store heading-->
+            <div style="width: 100%; height: 100px;"><!--Setting map size-->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48257.1640764317!2d80.57460561377583!3d7.297536138186176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e03c35!2sKandy!5e0!3m2!1sen!2slk!4v1736726431786!5m2!1sen!2slk"></iframe><!--Linking map-->
+            </div>
+        </div>
+        
+        <!-- Social media links -->
+        <div class="social-links">
+            <h3>Follow Us :</h3><!--Follow Us heading-->
+
+            <!--Facebook link-->
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook link">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <!--Instagram link-->
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!--LinkenIn link-->
+            <a href="https://www.linkedin.com/login" target="_blank" aria-label="LinkenIn link">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!--Copyright message-->
+    <p>&copy; 2025 Gamers' Arena. All Rights Reserved.</p>
+</footer>
+<!-- Footer ends -->
+        
+</body>
+</html>
+

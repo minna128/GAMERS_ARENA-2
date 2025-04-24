@@ -1,0 +1,530 @@
+/* setting styles for consistent appearance across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+
+/* Background image and font to be maintained in the website */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.096)), 
+    url('bg2.jpg') no-repeat center center fixed;
+    background-size: cover; /*Setting image to cover the screen*/
+    font-family: "Poppins", serif; /*Setting a clean serif font*/
+}
+
+
+/* CSS for header section begins */
+
+/* Navigation bar styles */
+
+nav {
+    z-index: 2; /*Ensures the nav stays above other elements*/
+    position: fixed; /*Makes nav fixed at the top during scroll*/
+    top: 0; /* Aligns the nav to the top of the page*/
+    width: 100%; /*Makes nav span the full width*/
+    background-color: #000; /*Black background for contrast*/
+    border: 1px solid rgba(43, 4, 54, 0.89);/*Purple border for defining the nav bar*/
+    border-width: 2px;/*Setting border width*/
+    display: flex;/*Displaying nav as flex*/
+    justify-content: space-between;/*Even spacing around content*/
+    align-items: center;/*Aligning items to center*/
+    padding: 14px;/*Space between items and container*/
+    margin: 10px;/*Space around container and page border*/
+    margin-left: 0;/*Ensuring no margin on the left*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow for depth */
+}
+
+
+/* Logo and styling */
+nav h2 {
+    color: #fff;/* White color text for contrast */
+    font-style: italic;/* Adds emphasis */
+    text-align: left;/*Aligning logo to the left of nav*/
+}
+
+
+nav h2 span {
+    color: rgb(236, 36, 53);/*Adding color for text in span tag*/
+}
+
+
+/*Navigation links*/
+nav ul {
+    display: flex;/*Displaying nav unordered list as flex*/
+    gap: 20px; /*Spacing between links*/
+}
+
+nav ul li {
+    list-style: none;/*Removing default bullet points*/
+}
+
+nav ul li a {
+    color: #fff;/*Text color*/
+    text-decoration: none;/*Removing underline*/
+    transition: 0.3s;/*Setting transition effect timing*/
+}
+
+nav ul li a:hover {
+    /*Adding visual effect on hover for nav links*/
+    box-shadow: 0 5px 20px rgb(249, 120, 15) inset, 0 5px 20px rgb(245, 15, 249) inset;
+}
+
+/*Social icons in nav*/
+.socials {
+    border-color: rgba(43, 4, 54, 0.89);/*Matching the border style with the theme*/
+    border-style: solid;/*Solid border*/
+    display: flex;/*Displaying social links as flex*/
+    align-items: center;/*Aligning links to center*/
+    gap: 10px; /*Space between icons*/
+   
+}
+
+
+.socials a {
+    color: #ffffff;/*icon color*/
+    text-decoration: none;/*Removing underline*/
+    font-size: 25px;/*icon size*/
+    display: inline-block;/*Display icons as inline-block*/
+    margin: 0 5px; /*Horizontal spacing*/
+    padding: 0px;/*Splace between links and border*/
+    cursor: pointer;/*Change cursor to pointer to indicate its clickable*/
+    position: relative;/*Position relative to page*/
+    transition: transform 0.3s ease, color 0.3s ease;/*Animation effect transition time*/
+}
+
+.socials a:hover {
+    transform: scale(1.2);/*Increase size of icon when cursor placed on it*/
+    color: #00aced; /*Change color of icon when hover*/
+}
+
+.hamburger {
+    display: none; /* Hide it by default */
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(236, 36, 53);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+
+
+/* CSS for header section ends */
+
+
+body,h1, h2 {
+    color: #ffffff;
+    
+}
+
+.main{
+    margin-top: 10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    border: rgba(43, 4, 54, 0.89);
+    border-style: solid;
+    display: block;
+    text-align: center;
+}
+
+.subheading{
+    color: #fff;
+    padding: 10px;
+    font-size: 1.3rem;
+    margin-left: 40px;
+    margin-top: 30px;
+
+}
+  
+  table {
+    width: 97%;
+    border-collapse: collapse;
+    background: white;
+    margin: 20px;
+    margin-top: 30px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    color: #000;
+  }
+  
+  tfoot {
+    font-weight: bold;
+    background-color: #eef;
+  }
+
+  #checkout-form{
+    width: 97%;
+    border-collapse: collapse;
+    margin: 20px;
+    margin-bottom: 30px;
+ 
+
+  }
+
+legend{
+    color: rgb(255, 255, 255);
+    font-weight:900;
+    font-size: 18px;
+    background-color: #363232;
+  }
+  
+  fieldset {
+    margin: 20px ;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #363232;
+    background-color: #b6b2b2;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  input, textarea, select {
+    padding: 8px;
+    width: 97%;
+    box-sizing: border-box;
+    margin: 15px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #363232;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px;
+  }
+  
+  button:hover {
+    background-color: #b6b2b2;
+  }
+  
+  #thank-you-message {
+    background-color:#363232;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #363232;
+    border-radius: 6px;
+    display: none;
+  }
+
+
+/* CSS for footer section begins */
+
+footer {
+    padding: 20px;
+    color: #fff;/*Text color*/
+    background-color: #000; /*Background for better contrast*/
+    margin-top: 25px;/*Space above*/
+    margin: 10px;/*Space all sides*/
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;/*Ensures equal spacing between content*/
+    padding-bottom: 10px;
+    margin: 10px;
+    align-items: flex-start; /*Ensures alignment at the top*/
+}
+
+.footer-container h3 {
+    background-color: #ffffff;/*Background color*/
+    color: #000;/*Text color*/
+    font-weight: bold;/*Bold font*/
+    text-align: center;/*Text align to center*/
+    margin-bottom: 10px;/*Space below*/
+    font-size: 1.5rem;/*Font size*/
+    padding: 5px;
+    display: inline-block;
+}
+
+.abt, .map{
+    flex: 1 1 300px; /*Flexible width with size*/
+    text-align: center;/*Align text to center*/
+    margin: 20px 0; /*Adjusted overall margin*/
+}
+
+.abt p {
+    font-size: 1rem;/*Font size*/
+    margin-top: 10px;/*Space above*/
+    line-height: 1.6;/*Space between line*/
+}
+
+.social-links {
+    text-align: center;/*Align text to center*/
+    width: 100%; /* Center-align in a single row */
+    margin-top: 20px; /* Reduced space above "Follow Us" */
+    display: block;
+}
+
+.social-links a {
+    display: inline-block;/*Display icons as inline-block*/
+    color: #ffffff;/*icon color*/
+    text-decoration: none;/*Removing underline*/
+    font-size: 25px;/*icon size*/
+    margin: 0 10px;/*Horizontal spacing*/
+    transition: transform 0.3s ease, color 0.3s ease;/*Animation effect transition time*/
+    cursor: pointer;/*Change cursor to pointer to indicate its clickable*/
+}
+
+.social-links a:hover {
+    transform: scale(1.2);/*Increase size of icon when cursor placed on it*/
+    color: #00aced; /*Change color of icon when hover*/
+}
+
+
+.map iframe {
+    width: 100%;
+    height: 150px; /* Reduced height */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+footer p {
+    text-align: center;/*Align text to center*/
+    font-size: 0.9rem;/*Font size of footer paragraph*/
+    margin-top: 15px;/*Space above*/
+    color: #ccc; /* Slightly muted color for extra text */
+}
+
+@media screen and (max-width: 1330px) {
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer; /* Show pointer to indicate it's clickable */
+        position: absolute; /* Position hamburger icon */
+        right: 20px; /* Align it to the top right */
+        z-index: 10; /* Ensure it stays above other content */
+    }
+
+    nav ul {
+        display: none; /* Initially hide the nav links */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width for mobile */
+    }
+
+    nav ul.show {
+        display: flex; /* Show nav links when the 'show' class is added */
+    
+}
+
+    .socials {
+        display: none; /* Hide socials for smaller screens */
+    }
+
+    nav ul li {
+        display: none; /* Hide nav links for smaller screens */
+    }
+
+    /* Hamburger menu container positioned at top-right */
+    .container {
+        display: inline-block; /* Display hamburger container */
+        cursor: pointer; /* Pointer to indicate it's clickable */
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust top space from the top of the page */
+        right: 20px; /* Align it to the right of the page */
+        z-index: 10; /* Make sure the hamburger is above other content */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to center */
+        text-align: center; /* Align text to center */
+    }
+
+    .abt, .map {
+        flex: 1 1 100%; /* Full width for these items */
+        margin: 10px 0; /* Adjusted margin for smaller screens */
+    }
+
+    .social-links {
+        flex: 1 1 100%; /* Take full width */
+        order: 3; /* Ensure it appears last */
+        margin-top: 150px; /* Space above */
+        display: block; /* Display as block */
+    }
+
+    .social-links a {
+        font-size: 20px; /* Adjust icon size for smaller screens */
+        display: inline-block; /* Display icons as inline-block */
+    }
+
+    .map iframe {
+        width: 100%; /* Width adjust according to screen size */
+        height: 250px; /* Map height */
+        border: 0; /* Ensuring no border width */
+        border-radius: 8px; /* Curved edges of border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        margin-top: 20px; /* Space above */
+        margin-bottom: 1px; /* Space below */
+    }
+
+    /* Hamburger menu bars */
+    .bar1, .bar2, .bar3 {
+        width: 35px; /* Width of the menu bar */
+        height: 5px; /* Height of the menu bar */
+        background-color: rgb(236, 36, 53); /* Bar color */
+        margin: 6px 0; /* Space between bars */
+        transition: 0.4s; /* Smooth transition for animations */
+    }
+
+    table{
+        margin: 10px;
+    }
+}
+
+
+/* Responsiveness for screen widths below 1270px */
+@media screen and (max-width: 1270px) {
+    .socials {
+        display: none; /* Hide socials for smaller screens */
+    }
+
+    nav ul li{
+        display: none; /*Hide nav links for smaller screens*/
+
+    }
+
+     /* Hamburger menu container */
+    .container {
+        display: inline-block; /*Display hamburger container*/
+        cursor: pointer; /*Pointer to indicate it's clickable*/
+    }
+
+
+    .footer-container {
+        flex-direction: column; /*Stack items vertically*/
+        align-items: center; /*Align items to center*/
+        text-align: center; /*Align text to center*/
+    }
+
+    .abt, .map {
+        flex: 1 1 100%; /*Full width for these items*/
+        margin: 10px 0; /*Adjusted margin for smaller screens*/
+    }
+
+    .social-links {
+        flex: 1 1 100%; /*Take full width*/
+        order: 3; /*Ensure it appears last*/
+        margin-top: 150px;/*Space above*/
+        display: block;/*Display as block*/
+    }
+
+    .social-links a {
+        font-size: 20px; /*Adjust icon size for smaller screens*/
+        display: inline-block;/*Diaplay icons as inline-block*/
+    }
+
+    .map iframe {
+        width: 100%;/*Width ajust according to screen size*/
+        height: 250px; /*Map height*/
+        border: 0;/*Ensuring no border width*/
+        border-radius: 8px;/*Curved edges of border*/
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/*Shadow effect*/
+        margin-top: 20px;/*Space above*/
+        margin-bottom: 1px;/*Space below*/
+    }
+
+
+    /* Hamburger menu bars */
+    .bar1, .bar2, .bar3 {
+        width: 35px; /*Width of the menu bar*/
+        height: 5px; /*Height of the menu bar*/
+        background-color: rgb(236, 36, 53); /*Bar color*/
+        margin: 6px 0; /*Space between bars*/
+        margin-left: 100%;
+        transition: 0.4s;/*Smooth transition for animations*/
+      }
+
+}
+
+/* Additional responsiveness for mobile screens*/
+@media screen and (max-width: 768px) {
+    .footer-container {
+        padding: 10px;/*Space between text and container*/
+    }
+
+    .abt p {
+        font-size: 0.9rem; /*Smaller text to fit*/
+    }
+
+    .social-links a {
+        font-size: 18px; /*Adjust icon size to fit*/
+    }
+
+    .map iframe {
+        height: 180px; /*Adjust height for smaller screens*/
+    }
+
+    nav ul {
+        display: none; /* Hide links */
+        flex-direction: column; /* Stack vertically */
+        width: 100%;
+    }
+
+    .hamburger {
+        display: inline-block; /* Show hamburger */
+        cursor: pointer;
+    }
+
+    nav ul.show {
+        display: flex; /* Show nav links when hamburger is clicked */
+    }
+    
+    .socials {
+        display: none; /* Hide social icons on smaller screens */
+    }
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(236, 36, 53);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .main{
+        margin-top: 22%;
+    }
+
+
+    nav h2{
+        text-align: left;
+    }
+
+    
+}

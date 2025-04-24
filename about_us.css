@@ -1,0 +1,537 @@
+/* setting styles for consistent appearance across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+
+/* Background image and font to be maintained in the website */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.096)), 
+    url('bg2.jpg') no-repeat center center fixed;
+    background-size: cover; /*Setting image to cover the screen*/
+    font-family: "Poppins", serif; /*Setting a clean serif font*/
+}
+
+
+/* CSS for header section begins */
+
+/* Navigation bar styles */
+nav {
+    z-index: 2; /*Ensures the nav stays above other elements*/
+    position: fixed; /*Makes nav fixed at the top during scroll*/
+    top: 0; /* Aligns the nav to the top of the page*/
+    width: 100%; /*Makes nav span the full width*/
+    background-color: #000; /*Black background for contrast*/
+    border: 1px solid rgba(43, 4, 54, 0.89);/*Purple border for defining the nav bar*/
+    border-width: 2px;/*Setting border width*/
+    display: flex;/*Displaying nav as flex*/
+    justify-content: space-between;/*Even spacing around content*/
+    align-items: center;/*Aligning items to center*/
+    padding: 14px;/*Space between items and container*/
+    margin: 10px;/*Space around container and page border*/
+    margin-left: 0;/*Ensuring no margin on the left*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow for depth */
+}
+
+
+/* Logo and styling */
+nav h2 {
+    color: #fff;/* White color text for contrast */
+    font-style: italic;/* Adds emphasis */
+    text-align: left;/*Aligning logo to the left of nav*/
+}
+
+
+nav h2 span {
+    color: rgb(236, 36, 53);/*Adding color for text in span tag*/
+}
+
+
+/*Navigation links*/
+nav ul {
+    display: flex;/*Displaying nav unordered list as flex*/
+    gap: 20px; /*Spacing between links*/
+}
+
+nav ul li {
+    list-style: none;/*Removing default bullet points*/
+}
+
+nav ul li a {
+    color: #fff;/*Text color*/
+    text-decoration: none;/*Removing underline*/
+    transition: 0.3s;/*Setting transition effect timing*/
+}
+
+nav ul li a:hover {
+    /*Adding visual effect on hover for nav links*/
+    box-shadow: 0 5px 20px rgb(249, 120, 15) inset, 0 5px 20px rgb(245, 15, 249) inset;
+}
+
+/*Social icons in nav*/
+.socials {
+    border-color: rgba(43, 4, 54, 0.89);/*Matching the border style with the theme*/
+    border-style: solid;/*Solid border*/
+    display: flex;/*Displaying social links as flex*/
+    align-items: center;/*Aligning links to center*/
+    gap: 10px; /*Space between icons*/
+   
+}
+
+
+.socials a {
+    color: #ffffff;/*icon color*/
+    text-decoration: none;/*Removing underline*/
+    font-size: 25px;/*icon size*/
+    display: inline-block;/*Display icons as inline-block*/
+    margin: 0 5px; /*Horizontal spacing*/
+    padding: 0px;/*Splace between links and border*/
+    cursor: pointer;/*Change cursor to pointer to indicate its clickable*/
+    position: relative;/*Position relative to page*/
+    transition: transform 0.3s ease, color 0.3s ease;/*Animation effect transition time*/
+}
+
+.socials a:hover {
+    transform: scale(1.2);/*Increase size of icon when cursor placed on it*/
+    color: #00aced; /*Change color of icon when hover*/
+}
+
+/* For the hamburger menu icon */
+.hamburger {
+    display: none; /* Hide it by default */
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(236, 36, 53);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+
+/* CSS for header section ends */
+
+
+
+/* CSS for main section begins */
+
+
+.ourbranches {
+    margin-top: 10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #000;
+    border: rgba(43, 4, 54, 0.89);
+    border-style: solid;
+    display: block;
+    text-align: center;
+
+}
+
+
+
+
+.branches {
+    display: flex;
+    flex-wrap: wrap;/* Allows items to wrap on smaller screens */
+    gap: 20px;
+    justify-content: center;
+    margin: 3%;
+    position: relative; /* Needed for absolute positioning of child elements */
+
+}
+
+.location {
+    flex: 1 1 calc(33.333% - 20px); /* Align with .branch elements */
+    max-width: 800px;
+    margin: 5px auto; /* Center the location */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .location {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .location {
+        padding: 10px;
+    }
+}
+
+
+
+
+.branch {
+    width: 100%; /* Full width */
+    height: auto; /* Allows the height to adjust based on content */
+    max-width: 800px; /* Optional: max width for larger screens */
+    margin: 0 auto; /* Center the branch container */
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 20px); /* 3 items per row on large screens */
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 2px;
+    padding: 5px;
+    color: white;
+    display: flex; /* Changed to flex for better alignment */
+    flex-direction: column; /* Stacks content vertically */
+
+    
+    
+}
+/* Adjust text margins */
+.branch p{
+    margin-top: 20px;
+    
+    
+}
+
+.branch h3{
+    margin-top: 0px;
+    
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .branch {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .branch {
+        max-width: 80%; /* Allow more width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        position: relative; /* Change position to relative for better flow */
+        left: 0; /* Reset left positioning */
+        transform: none; /* Reset translation */
+        margin: 10px auto; /* Center the image with auto margins */
+    }
+
+    .branches {
+        gap: 15px; /* Reduce spacing on smaller screens */
+    }
+
+    .ourbranches {
+        margin-top: 100px; /* Adjust heading margin for smaller screens */
+        font-size: 1.5em; /* Scale down font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ourbranches h2 {
+        font-size: 1.2em; /* Further scale down heading font */
+        padding: 15px;
+    }
+
+    .branch {
+        padding: 10px; /* Add more compact padding */
+    }
+
+    .branch .image {
+        max-width: 90%; /* Further adjust width for very small screens */
+    }
+}
+
+
+
+.branch .image {
+    
+    margin-top: 10px; /* Space above the image */
+    left: 50%; /* Center horizontally */
+    
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    width: 100%; /* Full width for responsive scaling */
+    max-width: 300px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+
+}
+
+
+
+   
+.details table {
+    background-color: #000000;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.details table th, .details table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+/* CSS for main section ends */
+
+
+/* CSS for footer section begins */
+
+footer {
+    padding: 20px;
+    color: #fff;/*Text color*/
+    background-color: #000; /*Background for better contrast*/
+    margin-top: 25px;/*Space above*/
+    margin: 10px;/*Space all sides*/
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;/*Ensures equal spacing between content*/
+    padding-bottom: 10px;
+    margin: 10px;
+    align-items: flex-start; /*Ensures alignment at the top*/
+}
+
+.footer-container h3 {
+    background-color: #ffffff;/*Background color*/
+    color: #000;/*Text color*/
+    font-weight: bold;/*Bold font*/
+    text-align: center;/*Text align to center*/
+    margin-bottom: 10px;/*Space below*/
+    font-size: 1.5rem;/*Font size*/
+    padding: 5px;
+    display: inline-block;
+}
+
+.abt, .map{
+    flex: 1 1 300px; /*Flexible width with size*/
+    text-align: center;/*Align text to center*/
+    margin: 20px 0; /*Adjusted overall margin*/
+}
+
+.abt p {
+    font-size: 1rem;/*Font size*/
+    margin-top: 10px;/*Space above*/
+    line-height: 1.6;/*Space between line*/
+}
+
+.social-links {
+    text-align: center;/*Align text to center*/
+    width: 100%; /* Center-align in a single row */
+    margin-top: 20px; /* Reduced space above "Follow Us" */
+    display: block;
+}
+
+.social-links a {
+    display: inline-block;/*Display icons as inline-block*/
+    color: #ffffff;/*icon color*/
+    text-decoration: none;/*Removing underline*/
+    font-size: 25px;/*icon size*/
+    margin: 0 10px;/*Horizontal spacing*/
+    transition: transform 0.3s ease, color 0.3s ease;/*Animation effect transition time*/
+    cursor: pointer;/*Change cursor to pointer to indicate its clickable*/
+}
+
+.social-links a:hover {
+    transform: scale(1.2);/*Increase size of icon when cursor placed on it*/
+    color: #00aced; /*Change color of icon when hover*/
+}
+
+
+.map iframe {
+    width: 100%;
+    height: 150px; /* Reduced height */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+footer p {
+    text-align: center;/*Align text to center*/
+    font-size: 0.9rem;/*Font size of footer paragraph*/
+    margin-top: 15px;/*Space above*/
+    color: #ccc; /* Slightly muted color for extra text */
+}
+
+/* Responsiveness for screen widths below 1330px */
+
+@media screen and (max-width: 1330px) {
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer; /* Show pointer to indicate it's clickable */
+        position: absolute; /* Position hamburger icon */
+        top: 20px;
+        right: 20px; /* Align it to the top right */
+        z-index: 10; /* Ensure it stays above other content */
+    }
+
+    nav ul {
+        display: none; /* Initially hide the nav links */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width for mobile */
+    }
+
+    nav ul.show {
+        display: flex; /* Show nav links when the 'show' class is added */
+    
+}
+    .socials {
+        display: none; /* Hide socials for smaller screens */
+    }
+
+    nav ul li {
+        display: none; /* Hide nav links for smaller screens */
+    }
+
+    /* Hamburger menu container positioned at top-right */
+    .container {
+        display: inline-block; /* Display hamburger container */
+        cursor: pointer; /* Pointer to indicate it's clickable */
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust top space from the top of the page */
+        right: 20px; /* Align it to the right of the page */
+        z-index: 10; /* Make sure the hamburger is above other content */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to center */
+        text-align: center; /* Align text to center */
+    }
+
+    .abt, .map {
+        flex: 1 1 100%; /* Full width for these items */
+        margin: 10px 0; /* Adjusted margin for smaller screens */
+    }
+
+    .social-links {
+        flex: 1 1 100%; /* Take full width */
+        order: 3; /* Ensure it appears last */
+        margin-top: 150px; /* Space above */
+        display: block; /* Display as block */
+    }
+
+    .social-links a {
+        font-size: 20px; /* Adjust icon size for smaller screens */
+        display: inline-block; /* Display icons as inline-block */
+    }
+
+    .map iframe {
+        width: 100%; /* Width adjust according to screen size */
+        height: 250px; /* Map height */
+        border: 0; /* Ensuring no border width */
+        border-radius: 8px; /* Curved edges of border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        margin-top: 20px; /* Space above */
+        margin-bottom: 1px; /* Space below */
+    }
+
+    /* Hamburger menu bars */
+    .bar1, .bar2, .bar3 {
+        width: 35px; /* Width of the menu bar */
+        height: 5px; /* Height of the menu bar */
+        background-color: rgb(236, 36, 53); /* Bar color */
+        margin: 6px 0; /* Space between bars */
+        transition: 0.4s; /* Smooth transition for animations */
+    }
+}
+
+
+/* Responsiveness for screen widths below 1270px */
+@media screen and (max-width: 1270px) {
+    .socials {
+        display: none; /* Hide socials for smaller screens */
+    }
+
+    nav ul li{
+        display: none; /*Hide nav links for smaller screens*/
+
+    }
+
+     /* Hamburger menu container */
+    .container {
+        display: inline-block; /*Display hamburger container*/
+        cursor: pointer; /*Pointer to indicate it's clickable*/
+    }
+
+
+    .footer-container {
+        flex-direction: column; /*Stack items vertically*/
+        align-items: center; /*Align items to center*/
+        text-align: center; /*Align text to center*/
+    }
+
+    .abt, .map {
+        flex: 1 1 100%; /*Full width for these items*/
+        margin: 10px 0; /*Adjusted margin for smaller screens*/
+    }
+
+    .social-links {
+        flex: 1 1 100%; /*Take full width*/
+        order: 3; /*Ensure it appears last*/
+        margin-top: 150px;/*Space above*/
+        display: block;/*Display as block*/
+    }
+
+    .social-links a {
+        font-size: 20px; /*Adjust icon size for smaller screens*/
+        display: inline-block;/*Diaplay icons as inline-block*/
+    }
+
+    .map iframe {
+        width: 100%;/*Width ajust according to screen size*/
+        height: 250px; /*Map height*/
+        border: 0;/*Ensuring no border width*/
+        border-radius: 8px;/*Curved edges of border*/
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/*Shadow effect*/
+        margin-top: 20px;/*Space above*/
+        margin-bottom: 1px;/*Space below*/
+    }
+
+      /* Hamburger menu bars */
+      .bar1, .bar2, .bar3 {
+        width: 35px; /* Width of the menu bar */
+        height: 5px; /* Height of the menu bar */
+        background-color: rgb(236, 36, 53); /* Dark bar color */
+        margin: 6px 0; /* Space between bars */
+        margin-left: 100%;
+        transition: 0.4s;/* Smooth transition for animations */
+      }
+ }
+
+ @media screen and (max-width: 768px) {
+    .footer-container {
+        padding: 10px;
+    }
+
+    .abt p {
+        font-size: 0.9rem; /* Smaller text for better fit */
+    }
+
+    .social-links a {
+        font-size: 18px; /* Adjust icon size */
+    }
+
+    .map iframe {
+        height: 180px; /* Adjusted height for smaller screens */
+    }
+}
